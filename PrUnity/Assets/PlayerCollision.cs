@@ -11,7 +11,8 @@ public class PlayerCollision : MonoBehaviour
         if (collision.collider.tag == "car")
         {
             Debug.Log("car crash");
-            movement.enabled = false;
+            movement.kip.transform.rotation = new Quaternion(-1.56f, -188.614f, 270.403f, 0);
+            movement.alive = false;
         }            
     }
 }

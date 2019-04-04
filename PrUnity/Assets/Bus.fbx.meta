@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 18a04a07044a83045a06ca3b2005f10a
+guid: 39806a3c80a8b0348a28f58418d55f5b
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -8,33 +8,43 @@ ModelImporter:
     100004: wheel_2
     100006: wheel_3
     100008: wheel_4
+    100010: wheel_5
+    100012: wheel_6
     400000: //RootNode
     400002: wheel
     400004: wheel_2
     400006: wheel_3
     400008: wheel_4
+    400010: wheel_5
+    400012: wheel_6
     2100000: No Name
     2300000: //RootNode
     2300002: wheel
     2300004: wheel_2
     2300006: wheel_3
     2300008: wheel_4
+    2300010: wheel_5
+    2300012: wheel_6
     3300000: //RootNode
     3300002: wheel
     3300004: wheel_2
     3300006: wheel_3
     3300008: wheel_4
-    4300000: car01
+    3300010: wheel_5
+    3300012: wheel_6
+    4300000: bus
     4300002: wheel
     4300004: wheel_2
     4300006: wheel_3
     4300008: wheel_4
+    4300010: wheel_5
+    4300012: wheel_6
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: No Name
-    second: {fileID: 2100000, guid: bf172da98d1ab6f4cafc7ca42c36ef6f, type: 2}
+    second: {fileID: 2100000, guid: e48e0d18fdd39ef4cbd88284bfbdc1cb, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
