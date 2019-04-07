@@ -70,6 +70,9 @@
     <Compile Include="Assets\Scripts\PlayerMov.cs" />
     <None Include="Assets\Fantasy Skybox FREE\Readme.txt" />
     <None Include="Assets\Fantasy Skybox FREE\Fog and Ambient references.txt" />
+    <None Include="Assets\KajamansRoads\FileNamesDescription.txt" />
+    <None Include="Assets\VertexColorFarmAnimals\Shaders\VertexColorUnlit.shader" />
+    <None Include="Assets\KajamansRoads\Free\ReadMe.txt" />
     <None Include="Assets\GE Common Assets\Readme.txt" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/cris1/Dropbox/DAM/2oDAM/Proyecto/ProyectoDAM/PrUnity/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>

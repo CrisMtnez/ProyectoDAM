@@ -18,14 +18,31 @@ public class CarMov : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (trCar.position.x >= endRoad)
+        if (car.transform.localRotation.w > 0)  //la w marca la direccion
         {
-            Debug.Log("sobresale la carretera");
-            car.transform.position = new Vector3(-endRoad, y, car.position.z);
+            if (trCar.position.x >= endRoad)
+            {
+                //Debug.Log("sobresale la carretera");
+                car.transform.position = new Vector3(-endRoad, y, car.position.z);
+            }
+            else
+            {
+                car.transform.position = new Vector3((float)(car.position.x + 0.5), y, car.position.z);
+            }
+            //Debug.Log("w: " + car.transform.localRotation.w);
         }
         else
         {
-            car.transform.position = new Vector3((float)(car.position.x + 0.5), y, car.position.z);
-        }            
+            if (trCar.position.x <= -endRoad)
+            {
+                //Debug.Log("sobresale la carretera");
+                car.transform.position = new Vector3(endRoad, y, car.position.z);
+            }
+            else
+            {
+                car.transform.position = new Vector3((float)(car.position.x - 0.5), y, car.position.z);
+            }
+            //Debug.Log("w: " + car.transform.localRotation.w);
+        }
     }
 }
