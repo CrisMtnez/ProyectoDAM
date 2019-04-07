@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - car
+  - ring
+  - altar
+  - platform
+  - win
   layers:
   - Default
   - TransparentFX

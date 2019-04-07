@@ -6,14 +6,12 @@ public class PlayerMov : MonoBehaviour
 {
     public Rigidbody kip;
     public bool saltando = false;
-    float y = 0.21f;
     public bool alive = true;
-    private bool bamboleo = true;
-    private float flow = 0.02f;
-    // Start is called before the first frame update
+    public float yPos = 0.25f;
+    public Animator anim;
+
     void Start()
-    {
-        //y = kip.position.y;
+    {       
     }
 
     // Update is called once per frame
@@ -22,44 +20,45 @@ public class PlayerMov : MonoBehaviour
         if (alive)
         {
             //usamos ifs porque con case no funciona
-            //float z = kip.transform.position.x % 2 == 0 ? 10:-10;
-            bamboleo = !bamboleo;
-            
 
-            if (Input.GetKey(KeyCode.Space) && kip.position.y <= y)
-                saltando = true;
-            if (saltando && kip.position.y <= 0.5)
-                kip.AddForce(0, 20 * Time.deltaTime, 0, ForceMode.VelocityChange);
-            else
-                saltando = false;
+                if (Input.GetKey(KeyCode.Space) && kip.position.y <= yPos)
+                    saltando = true;
+                if (saltando && kip.position.y <= yPos + 0.7f)
+                    kip.AddForce(0, 20 * Time.deltaTime, 0, ForceMode.VelocityChange);
+                else
+                    saltando = false;
 
             if (Input.GetKey(KeyCode.DownArrow))
             {
-                kip.transform.rotation = new Quaternion(bamboleo?flow:-flow, 1.2f, kip.transform.rotation.z, kip.transform.rotation.w);
+                kip.transform.rotation = new Quaternion(0, 1.2f, kip.transform.rotation.z, kip.transform.rotation.w);
                 kip.AddForce(0, 0, -10 * Time.deltaTime, ForceMode.VelocityChange);
-                Debug.Log("rot: " + kip.transform.localRotation.ToString());
+                //Debug.Log("rot: " + kip.transform.localRotation.ToString());
             }
                 
             if (Input.GetKey(KeyCode.UpArrow))
             {
-                kip.transform.rotation = new Quaternion(bamboleo ? flow : -flow, 0, kip.transform.rotation.z, kip.transform.rotation.w);
+                kip.transform.rotation = new Quaternion(0, 0, kip.transform.rotation.z, kip.transform.rotation.w);
                 kip.AddForce(0, 0, 10 * Time.deltaTime, ForceMode.VelocityChange);
-                Debug.Log("rot: " + kip.transform.localRotation.ToString());
+                //Debug.Log("rot: " + kip.transform.localRotation.ToString());
             }
                 
             if (Input.GetKey(KeyCode.LeftArrow))
             {
-                kip.transform.rotation = new Quaternion(bamboleo ? flow : -flow, -0.7f, kip.transform.rotation.z, transform.rotation.w);
+                kip.transform.rotation = new Quaternion(0, -0.7f, kip.transform.rotation.z, transform.rotation.w);
                 kip.AddForce(-10 * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
-                Debug.Log("rot: " + kip.transform.localRotation.ToString());
+                //Debug.Log("rot: " + kip.transform.localRotation.ToString());
             }
                 
             if (Input.GetKey(KeyCode.RightArrow))
             {
-                kip.transform.rotation = new Quaternion(bamboleo ? flow : -flow, 0.7f, kip.transform.rotation.z, transform.rotation.w);
+                kip.transform.rotation = new Quaternion(0, 0.7f, kip.transform.rotation.z, transform.rotation.w);
                 kip.AddForce(10 * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
-                Debug.Log("rot: " + kip.transform.localRotation.ToString());
-            }                
+                //Debug.Log("rot: " + kip.transform.localRotation.ToString());
+            }
+        }
+        else
+        {
+            anim.runtimeAnimatorController = null;
         }
     }
 }
@@ -82,4 +81,28 @@ public class PlayerMov : MonoBehaviour
                 kip.AddForce(0, 20 * Time.deltaTime, 0, ForceMode.VelocityChange);
             else
                 saltando = false;
+                
+             //private float flow = 0.02f;
+            //float z = kip.transform.position.x % 2 == 0 ? 10:-10;
+            //bamboleo = !bamboleo; en x: bamboleo?flow:-flow
+
+
+    private bool bamboleo = true;
+    public Animator animator;
+    int flyHash = Animator.StringToHash("fly");
+    int pokHash = Animator.StringToHash("pok");
+    int cheerHash = Animator.StringToHash("cheer");
+    int walkHash = Animator.StringToHash("walk");
+
+     animator = GetComponent<Animator>();
+
+     float move = Input.GetAxis("Vertical");
+            animator.SetFloat("Speed", move);
+
+            AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                animator.SetTrigger(flyHash);
+            }
+
 */
