@@ -65,6 +65,7 @@
     <Compile Include="Assets\Scripts\CarMov.cs" />
     <Compile Include="Assets\Scripts\FollowPlayer.cs" />
     <Compile Include="Assets\Scripts\GameEnds.cs" />
+    <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\PlayerCollision.cs" />
     <Compile Include="Assets\Scripts\PlayerMov.cs" />
     <None Include="Assets\Fantasy Skybox FREE\Readme.txt" />

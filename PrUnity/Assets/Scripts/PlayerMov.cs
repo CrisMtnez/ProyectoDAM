@@ -17,6 +17,11 @@ public class PlayerMov : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        if (kip.position.y < -1)
+        {
+            alive = false;
+            FindObjectOfType<GameManager>().GameOver();
+        }
         if (alive)
         {
             //usamos ifs porque con case no funciona
