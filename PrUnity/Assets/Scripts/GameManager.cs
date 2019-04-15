@@ -3,8 +3,13 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    bool ended = false;
+    public bool ended = false;
     public GameEnds ge;
+
+    public void Start()
+    {
+
+    }
 
     public void GameOver()
     {
@@ -23,5 +28,11 @@ public class GameManager : MonoBehaviour
     public void Restart()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void FixedUpdate()
+    {
+        
+        
     }
 }
