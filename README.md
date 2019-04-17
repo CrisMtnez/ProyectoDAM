@@ -12,3 +12,4 @@
 
 07/03: Introducción de nuevos personajes con animación, creación del escenario final y empezando a desarrollar la pantalla de fin de partida.
 
+15/03: Creación de temporizador y triggers que finalizan la partida: plataforma de meta, caída al vacío, colisión y consumo del tiempo. Restauración al inicio del juego cuando esto pasa.
