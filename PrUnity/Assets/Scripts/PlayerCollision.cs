@@ -5,7 +5,6 @@ using UnityEngine;
 public class PlayerCollision : MonoBehaviour
 {
     public PlayerMov movement;
-    public GameEnds gameEnd;
 
     private void OnCollisionEnter(Collision collision)
     {

@@ -4,7 +4,8 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public bool ended = false;
-    public GameEnds ge;
+    public GameObject winPanel;
+    public PlayerMov playerMovement;
 
     public void Start()
     {
@@ -22,7 +23,12 @@ public class GameManager : MonoBehaviour
 
     public void YouWin()
     {
-
+        playerMovement.alive = false;
+        playerMovement.kip.freezeRotation = true;
+        playerMovement.kip.constraints = RigidbodyConstraints.FreezePositionY;
+        playerMovement.kip.constraints = RigidbodyConstraints.FreezePositionX;
+        playerMovement.kip.constraints = RigidbodyConstraints.FreezePositionZ;
+        winPanel.SetActive(true);        
     }
 
     public void Restart()
