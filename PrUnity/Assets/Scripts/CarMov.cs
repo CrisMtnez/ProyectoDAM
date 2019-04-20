@@ -17,7 +17,7 @@ public class CarMov : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        /*
+        
         if (car.transform.localRotation.w > 0)  //la w marca la direccion
         {
             if (trCar.position.x >= endRoad)
@@ -44,6 +44,6 @@ public class CarMov : MonoBehaviour
             }
             //Debug.Log("w: " + car.transform.localRotation.w);
         }
-        */
+        
     }    
 }

@@ -15,3 +15,5 @@
 15/03: Creación de temporizador y triggers que finalizan la partida: plataforma de meta, caída al vacío, colisión y consumo del tiempo. Restauración al inicio del juego cuando esto pasa.
 
 18/03: Creación de la animación que señala el fin de la partida. Empezando a crear nuevas escenas.
+
+21/03: Creación del menú de inicio y las opciones, vinculación de las escenas con los botones.
