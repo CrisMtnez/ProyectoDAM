@@ -16,4 +16,4 @@
 
 18/03: Creación de la animación que señala el fin de la partida. Empezando a crear nuevas escenas.
 
-21/03: Creación del menú de inicio y las opciones, vinculación de las escenas con los botones.
+21/03: Creación del menú de inicio y las opciones, vinculación de las escenas con los botones. Botón de salir. Empezando a implementar teclas de acceso rápido para salir y acceder a la ayuda.

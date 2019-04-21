@@ -5,9 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class OptionsButton : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public GameObject pB, oB, qB, cB, bB, sB, rB;
+
     public void OnClick()
     {
-        SceneManager.LoadScene(3);
+        pB.SetActive(false);
+        oB.SetActive(false);
+        qB.SetActive(false);
+        cB.SetActive(true);
+        sB.SetActive(true);
+        rB.SetActive(true);
+        bB.SetActive(true);
     }
 }

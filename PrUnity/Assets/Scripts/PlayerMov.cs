@@ -17,14 +17,16 @@ public class PlayerMov : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (kip.position.y < -1)
+        if (GameManager.PLAYING)
         {
-            alive = false;
-            FindObjectOfType<GameManager>().GameOver();
-        }
-        if (alive)
-        {
-            //usamos ifs porque con case no funciona
+            if (kip.position.y < -1)
+            {
+                alive = false;
+                FindObjectOfType<GameManager>().GameOver();
+            }
+            if (alive)
+            {
+                //usamos ifs porque con case no funciona
 
                 if (Input.GetKey(KeyCode.Space) && kip.position.y <= yPos)
                     saltando = true;
@@ -33,37 +35,38 @@ public class PlayerMov : MonoBehaviour
                 else
                     saltando = false;
 
-            if (Input.GetKey(KeyCode.DownArrow))
-            {
-                kip.transform.rotation = new Quaternion(0, 1.2f, kip.transform.rotation.z, kip.transform.rotation.w);
-                kip.AddForce(0, 0, -10 * Time.deltaTime, ForceMode.VelocityChange);
-                //Debug.Log("rot: " + kip.transform.localRotation.ToString());
+                if (Input.GetKey(KeyCode.DownArrow))
+                {
+                    kip.transform.rotation = new Quaternion(0, 1.2f, kip.transform.rotation.z, kip.transform.rotation.w);
+                    kip.AddForce(0, 0, -10 * Time.deltaTime, ForceMode.VelocityChange);
+                    //Debug.Log("rot: " + kip.transform.localRotation.ToString());
+                }
+
+                if (Input.GetKey(KeyCode.UpArrow))
+                {
+                    kip.transform.rotation = new Quaternion(0, 0, kip.transform.rotation.z, kip.transform.rotation.w);
+                    kip.AddForce(0, 0, 10 * Time.deltaTime, ForceMode.VelocityChange);
+                    //Debug.Log("rot: " + kip.transform.localRotation.ToString());
+                }
+
+                if (Input.GetKey(KeyCode.LeftArrow))
+                {
+                    kip.transform.rotation = new Quaternion(0, -0.7f, kip.transform.rotation.z, transform.rotation.w);
+                    kip.AddForce(-10 * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
+                    //Debug.Log("rot: " + kip.transform.localRotation.ToString());
+                }
+
+                if (Input.GetKey(KeyCode.RightArrow))
+                {
+                    kip.transform.rotation = new Quaternion(0, 0.7f, kip.transform.rotation.z, transform.rotation.w);
+                    kip.AddForce(10 * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
+                    //Debug.Log("rot: " + kip.transform.localRotation.ToString());
+                }
             }
-                
-            if (Input.GetKey(KeyCode.UpArrow))
+            else
             {
-                kip.transform.rotation = new Quaternion(0, 0, kip.transform.rotation.z, kip.transform.rotation.w);
-                kip.AddForce(0, 0, 10 * Time.deltaTime, ForceMode.VelocityChange);
-                //Debug.Log("rot: " + kip.transform.localRotation.ToString());
+                anim.runtimeAnimatorController = null;
             }
-                
-            if (Input.GetKey(KeyCode.LeftArrow))
-            {
-                kip.transform.rotation = new Quaternion(0, -0.7f, kip.transform.rotation.z, transform.rotation.w);
-                kip.AddForce(-10 * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
-                //Debug.Log("rot: " + kip.transform.localRotation.ToString());
-            }
-                
-            if (Input.GetKey(KeyCode.RightArrow))
-            {
-                kip.transform.rotation = new Quaternion(0, 0.7f, kip.transform.rotation.z, transform.rotation.w);
-                kip.AddForce(10 * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
-                //Debug.Log("rot: " + kip.transform.localRotation.ToString());
-            }
-        }
-        else
-        {
-            anim.runtimeAnimatorController = null;
         }
     }
 }

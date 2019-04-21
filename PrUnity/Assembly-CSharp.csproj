@@ -62,15 +62,22 @@
   <ItemGroup>
     <Compile Include="Assets\Fantasy Skybox FREE\Demo\Scripts\GE_FantasySkyboxFREE_Demo.cs" />
     <Compile Include="Assets\Fantasy Skybox FREE\Demo\Scripts\GE_FantasySkyboxFREE_UIs.cs" />
+    <Compile Include="Assets\Scripts\BackButton.cs" />
     <Compile Include="Assets\Scripts\CarMov.cs" />
+    <Compile Include="Assets\Scripts\CreditsButton.cs" />
     <Compile Include="Assets\Scripts\FollowPlayer.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
+    <Compile Include="Assets\Scripts\HelpButton.cs" />
+    <Compile Include="Assets\Scripts\HelpPanel.cs" />
+    <Compile Include="Assets\Scripts\MenuInit.cs" />
     <Compile Include="Assets\Scripts\MetaTrigger.cs" />
     <Compile Include="Assets\Scripts\OptionsButton.cs" />
     <Compile Include="Assets\Scripts\PlayButton.cs" />
     <Compile Include="Assets\Scripts\PlayerCollision.cs" />
     <Compile Include="Assets\Scripts\PlayerMov.cs" />
     <Compile Include="Assets\Scripts\QuitButton.cs" />
+    <Compile Include="Assets\Scripts\RecordsButton.cs" />
+    <Compile Include="Assets\Scripts\SoundButton.cs" />
     <Compile Include="Assets\Scripts\Timer.cs" />
     <None Include="Assets\Fantasy Skybox FREE\Readme.txt" />
     <None Include="Assets\Fantasy Skybox FREE\Fog and Ambient references.txt" />

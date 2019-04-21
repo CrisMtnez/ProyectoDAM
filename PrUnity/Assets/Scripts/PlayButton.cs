@@ -7,6 +7,7 @@ public class PlayButton : MonoBehaviour
 {
     public void OnClick()
     {
+        GameManager.PLAYING = true;
         SceneManager.LoadScene(1);
     }
 }
