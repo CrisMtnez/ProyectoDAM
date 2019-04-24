@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     public PlayerMov playerMovement;
     public GameObject helpButton;
     public GameObject time;
+    public GameObject tryAgainPanel;
     public static bool PLAYING = false;
     public bool firstStep = false;
 
@@ -21,7 +22,7 @@ public class GameManager : MonoBehaviour
         if (!ended)
         {
             ended = true;
-            Invoke("Restart", 1f);
+            Invoke("RestartPanel", 1f);
         }            
     }
 
@@ -35,9 +36,9 @@ public class GameManager : MonoBehaviour
         winPanel.SetActive(true);        
     }
 
-    public void Restart()
+    public void RestartPanel()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        tryAgainPanel.SetActive(true);        
     }
 
     public void FixedUpdate()
@@ -59,9 +60,7 @@ public class GameManager : MonoBehaviour
 
     public void QuitGame()
     {
-        SceneManager.LoadScene(1);
-        PLAYING = false;
-        SceneManager.LoadScene(0, LoadSceneMode.Additive);
+        FindObjectOfType<QuitButton>().OnPlaying();        
     }
 
     public void ShowHelp()
