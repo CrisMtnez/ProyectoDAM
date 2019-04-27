@@ -19,3 +19,5 @@
 21/04: Creación del menú de inicio y las opciones, vinculación de las escenas con los botones. Botón de salir. Empezando a implementar teclas de acceso rápido para salir y acceder a la ayuda.
 
 24/04: Creación de los paneles de salida del juego durante la partida y reinicio al perder.
+
+27/04: Pausa y panel de ayuda.
