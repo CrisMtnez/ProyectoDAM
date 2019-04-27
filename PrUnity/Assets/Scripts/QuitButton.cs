@@ -14,8 +14,8 @@ public class QuitButton : MonoBehaviour
 
     public void OnPlaying()
     {
-        //PONER JUEGO EN PAUSA
-        areYouSure.SetActive(true);        
+        FindObjectOfType<GameManager>().helpPanel.SetActive(false);        
+        areYouSure.SetActive(true);
     }
 
     public void YesButton()
@@ -28,6 +28,7 @@ public class QuitButton : MonoBehaviour
     public void NoButton()
     {
         areYouSure.SetActive(false);
+        FindObjectOfType<GameManager>().ResumeGame();
     }
 
     public void Restart()

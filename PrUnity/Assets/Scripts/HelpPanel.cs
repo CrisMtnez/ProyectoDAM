@@ -4,15 +4,8 @@ using UnityEngine;
 
 public class HelpPanel : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public void onBackClick()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        FindObjectOfType<GameManager>().HideHelp();
     }
 }

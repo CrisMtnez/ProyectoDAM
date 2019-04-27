@@ -55,24 +55,40 @@ public class GameManager : MonoBehaviour
         //if (!PLAYING && (Input.GetKey(KeyCode.H) || Input.GetKey(KeyCode.P)))     //no funciona bien
         //    HideHelp();
         if (PLAYING && Input.GetKey(KeyCode.Q))
+        {
+            PauseGame();
             QuitGame();
+        }           
     }
 
     public void QuitGame()
     {
+        PauseGame();
         FindObjectOfType<QuitButton>().OnPlaying();        
+    }
+
+    public void PauseGame()
+    {
+        PLAYING = false;
+        playerMovement.alive = false;
+    }
+
+    public void ResumeGame()
+    {
+        PLAYING = true;
+        playerMovement.alive = true;
     }
 
     public void ShowHelp()
     {        
         helpPanel.SetActive(true);
-        PLAYING = false;
-        //tiempo y coches en pausa, gallina quieta
+        PauseGame();
         //botones help con los comandos, quit para volver al menu y back para volver al juego
     }
-    //public void HideHelp()        //no funciona
-    //{
-    //    helpPanel.SetActive(false);
-    //    PLAYING = true;
-    //}
+
+    public void HideHelp()        
+    {
+        helpPanel.SetActive(false);
+        ResumeGame();
+    }
 }
