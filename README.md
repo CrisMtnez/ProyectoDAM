@@ -21,3 +21,5 @@
 24/04: Creación de los paneles de salida del juego durante la partida y reinicio al perder.
 
 27/04: Pausa y panel de ayuda.
+
+01/05: Mensaje de guía en la recta final. Vinculación de la ayuda al botón del panel, redirección al completar el juego.

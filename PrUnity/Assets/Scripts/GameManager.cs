@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     public GameObject tryAgainPanel;
     public static bool PLAYING = false;
     public bool firstStep = false;
+    public GameObject quicklyText;
 
     public void Start()
     {
@@ -19,6 +20,7 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
+        quicklyText.SetActive(false);
         if (!ended)
         {
             ended = true;
@@ -28,16 +30,24 @@ public class GameManager : MonoBehaviour
 
     public void YouWin()
     {
+        quicklyText.SetActive(false);
         playerMovement.alive = false;
         playerMovement.kip.freezeRotation = true;
         playerMovement.kip.constraints = RigidbodyConstraints.FreezePositionY;
         playerMovement.kip.constraints = RigidbodyConstraints.FreezePositionX;
         playerMovement.kip.constraints = RigidbodyConstraints.FreezePositionZ;
-        winPanel.SetActive(true);        
+        winPanel.SetActive(true);
+        Invoke("ShowCredits", 9f);
+    }
+
+    public void ShowCredits()
+    {
+        FindObjectOfType<QuitButton>().YesButton();
     }
 
     public void RestartPanel()
     {
+        quicklyText.SetActive(false);
         tryAgainPanel.SetActive(true);        
     }
 
@@ -83,12 +93,11 @@ public class GameManager : MonoBehaviour
     {        
         helpPanel.SetActive(true);
         PauseGame();
-        //botones help con los comandos, quit para volver al menu y back para volver al juego
     }
 
     public void HideHelp()        
     {
         helpPanel.SetActive(false);
-        ResumeGame();
+        ResumeGame();        
     }
 }

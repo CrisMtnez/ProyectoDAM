@@ -76,7 +76,7 @@
     <Compile Include="Assets\Scripts\PlayerCollision.cs" />
     <Compile Include="Assets\Scripts\PlayerMov.cs" />
     <Compile Include="Assets\Scripts\QuitButton.cs" />
-    <Compile Include="Assets\Scripts\RecordsButton.cs" />
+    <Compile Include="Assets\Scripts\RectaFinal.cs" />
     <Compile Include="Assets\Scripts\SoundButton.cs" />
     <Compile Include="Assets\Scripts\Timer.cs" />
     <None Include="Assets\Fantasy Skybox FREE\Readme.txt" />
