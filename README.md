@@ -23,3 +23,5 @@
 27/04: Pausa y panel de ayuda.
 
 01/05: Mensaje de guía en la recta final. Vinculación de la ayuda al botón del panel, redirección al completar el juego.
+
+03/05: Creación de la pantalla de créditos y vinculación con el menú opciones y fin del juego.

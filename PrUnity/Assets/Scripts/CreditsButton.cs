@@ -6,6 +6,6 @@ public class CreditsButton : MonoBehaviour
 {
     public void OnClick()
     {
-        //cargar escena creditos
+        FindObjectOfType<GameManager>().ShowCredits();
     }
 }

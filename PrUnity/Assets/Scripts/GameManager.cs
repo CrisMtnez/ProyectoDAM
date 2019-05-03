@@ -42,7 +42,8 @@ public class GameManager : MonoBehaviour
 
     public void ShowCredits()
     {
-        FindObjectOfType<QuitButton>().YesButton();
+        SceneManager.LoadScene(2);
+        GameManager.PLAYING = false;
     }
 
     public void RestartPanel()
