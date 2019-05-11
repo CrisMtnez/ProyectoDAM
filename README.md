@@ -25,3 +25,7 @@
 01/05: Mensaje de guía en la recta final. Vinculación de la ayuda al botón del panel, redirección al completar el juego.
 
 03/05: Creación de la pantalla de créditos y vinculación con el menú opciones y fin del juego.
+
+10/05: Introducción de música, efectos y animación de la pantalla de créditos.
+
+11/05: Solución de un bug con las pantallas de salida. Creación del icono y preparación del informe final.

@@ -6,6 +6,7 @@ Assets/Scenes/Menu.unity
 Assets/Scenes/SampleScene.unity
 Assets/Scenes/Credits.unity
 SceneListEnd?
+241cdffe091226a2894badc76dca99ad Assembly-CSharp.dll:.AudioCreditsController
 984dcc0ba3707b7691fbdca8ff508d28 Unity.TextMeshPro.dll:TMPro.TMP_SelectionCaret
 01aa15e337e3a9c62f15153dfac6d589 Unity.TextMeshPro.dll:TMPro.TMP_Dropdown
 71bb6a6b6c8f052f948db64c7dd3ca4f UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationPlayableAsset
@@ -125,8 +126,8 @@ d251bf88db6c95a6b1aa0b69298da9ef UnityEngine.SpatialTracking.dll:UnityEngine.Spa
 94017dcc9f00fe671ea7dc427b4da011 Unity.TextMeshPro.dll:TMPro.TMP_SpriteAsset
 219518047a7813bd12fbd9117f025fc8 Assembly-CSharp.dll:.FollowPlayer
 c98e9c81fc1bb2b48b7358037e680366 Assembly-CSharp.dll:.BackButton
-71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.SoundButton
-f6d43b93b81d1391b28ac54ceb7161ee Assembly-CSharp.dll:.GameManager
+e9f949ae797ae53592b04c5883edb3e4 Assembly-CSharp.dll:.SoundButton
+61d56892bf355dfbba83a328edd5b797 Assembly-CSharp.dll:.GameManager
 b3ab2106268377ffe25dd18ac23dca28 Unity.TextMeshPro.dll:TMPro.TMP_Asset
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.MenuInit
 71bb6a6b6c8f052f948db64c7dd3ca4f Unity.Analytics.Editor.dll:UnityEditor.Analytics.AnalyticsEventTrackerEditor

@@ -62,6 +62,7 @@
   <ItemGroup>
     <Compile Include="Assets\Fantasy Skybox FREE\Demo\Scripts\GE_FantasySkyboxFREE_Demo.cs" />
     <Compile Include="Assets\Fantasy Skybox FREE\Demo\Scripts\GE_FantasySkyboxFREE_UIs.cs" />
+    <Compile Include="Assets\Scripts\AudioCreditsController.cs" />
     <Compile Include="Assets\Scripts\BackButton.cs" />
     <Compile Include="Assets\Scripts\CarMov.cs" />
     <Compile Include="Assets\Scripts\CreditsButton.cs" />

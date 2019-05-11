@@ -8,6 +8,7 @@ public class BackButton : MonoBehaviour
 
     public void OnClick()
     {
+        FindObjectOfType<GameManager>().ClickSound();
         cB.SetActive(false);
         sB.SetActive(false);
         rB.SetActive(false);

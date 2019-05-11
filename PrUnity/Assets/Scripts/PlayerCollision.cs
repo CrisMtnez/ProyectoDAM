@@ -10,9 +10,11 @@ public class PlayerCollision : MonoBehaviour
     {
         if (collision.collider.tag == "car")
         {
+            FindObjectOfType<GameManager>().CrashSound();
             Debug.Log("car crash");
             movement.kip.transform.rotation = new Quaternion(-24.868f, 63f, 143.849f, 0);
-            movement.alive = false;
+            movement.alive = false;            
+            GameManager.crashSoundPlayed = true;
             FindObjectOfType<GameManager>().GameOver();
         }
         if (collision.collider.tag == "platform" || collision.collider.tag == "win")

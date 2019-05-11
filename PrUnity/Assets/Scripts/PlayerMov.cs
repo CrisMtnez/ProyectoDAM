@@ -31,9 +31,16 @@ public class PlayerMov : MonoBehaviour
                 if (Input.GetKey(KeyCode.Space) && kip.position.y <= yPos)
                     saltando = true;
                 if (saltando && kip.position.y <= yPos + 0.7f)
+                {
+                    FindObjectOfType<GameManager>().JumpSound();
+                    GameManager.jumpSoundPlayed = true;
                     kip.AddForce(0, 20 * Time.deltaTime, 0, ForceMode.VelocityChange);
+                }
                 else
+                {
                     saltando = false;
+                    GameManager.jumpSoundPlayed = false;
+                }                    
 
                 if (Input.GetKey(KeyCode.DownArrow))
                 {
